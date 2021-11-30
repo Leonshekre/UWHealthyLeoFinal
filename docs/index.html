@@ -14,11 +14,11 @@
         object-fit: cover;
       }
       .fit {
-        padding: 0;
         display: block;
         margin: 0 auto;
-        height: 80%;
         width: 95%;
+        height: 100%;
+        /* height nullified by width */
         border-style: solid;
         border-color: burlywood;
         border-width: 40px;
@@ -30,58 +30,60 @@
         font-weight: bold;
         font-size: larger;
       }
-      .CenterText {
-        text-align: center;
-      }
       .buttonMain{
         border: 5px solid burlywood;
-        padding: 16px 32px;
         font-size: 16px;
+        padding: 16px 32px;
+        /* 32px doesn't work, font size overrides */
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         transition-duration: 0.5s;
-        cursor: pointer;
         color: black;
         background-color: wheat;
         border-radius: 10px;
+        width: 50%
       }
       .button1:hover{
         background-color:burlywood;
-        border:4px solid wheat;
-        border-radius: 10px;
-        color: white
+        border:5px solid wheat;
+        border-radius: 50px;
       }
-      a:visited, a:focus{
+      a:visited, a:link, a:focus{
         text-decoration: none;
         color: black;
       }
       a:hover{
         text-decoration: none;
         color: wheat;
+        cursor:pointer;
       }
     </style>
   </head>
 
-  <body style="background-color: beige">
+  <body style= "background-color: beige">
     <img class="fit" src="Images/UWCampusImage1.jpg" alt="UW campus image" />
 
     <button class= "buttonMain button1">
       <a href="/docs/InfoPage/HomePage.html">HomePage</a>
     </button>
-    
-    <h3>HTML forms</h3>
+
+    <button style="margin-left:-5px" class="buttonMain button1">
+      <a href="/docs/InfoPage/Otherpage.html">Otherpage</a>
+    </button>
+    <!-- Editing buttons is hard bc of 95% for whole image and weird borders, fix later-->
+
+    <!-- <h3>HTML forms</h3>
     <form action="/docs/PHPFolder/action_page.php">
       <label for="fname">First name:</label><br>
       <input type="text" id="fname" name="fname"><br>
       <label for="lname">Last name:</label><br>
       <input type="text" id="lname" name="lname"><br>
-    </form>
+      <input type="submit" value="submit">
+    </form> -->
     
-    <h1 class="CenterText">Staying Healthy in UW!</h1>
-    <h2 class="CenterText">This is a work in progress!</h2>
-    <h2>Hello and welcome to my webpage!</h2>
-    <h3>Staying Healthy & Productive In UW!</h3>
+    <h1 style="text-align: center;" class="CenterText">Staying Healthy in UW!</h1>
+    <h2 style="text-align: center;">Hello and welcome to my webpage!</h2>
     <p style="font-size: large">
-      It's hard to stay healthy in College, especially with Covid still looming
+      It's hard to stay healthy in College, espec1ially with Covid still looming
       about. Eating at the dining halls is costly, boring, and requires timely
       precision because of how early they close, but fear not! </br></br>My goal shall be
       to provide you with the easiest, most delicious, and cheapest ways to stay
@@ -110,7 +112,7 @@
     <h2 id="section1-css">CSS</h2>
     -->
     <p style="color: gray; text-align: center; font-size: smaller">
-      Leonardo Paredes | 2021 | Staying healthy in UW
+      Work In Progress <br> Leonardo Paredes | 2021 | Staying healthy in UW
     </p>
   </body>
 </html>
